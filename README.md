@@ -7,6 +7,8 @@ A simple Command Line Library Management System built using Python.
 - ➕ Add Book
 - 📖 View All Books
 - 🔍 Search Book by ID
+- 🔍 Search Book by Name
+- 🔍 Search Book by Author
 - 🗑️ Delete Book
 - 📕 Issue Book
 - 📗 Return Book
