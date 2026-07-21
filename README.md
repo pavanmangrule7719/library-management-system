@@ -39,7 +39,7 @@ Library_Management/
 1. Clone the repository
 
 ```bash
-git clone https://github.com/YOUR_USERNAME/library-management-system.git
+git clone https://github.com/pavanmangrule7719/library-management-system.git
 ```
 
 2. Open the project folder

@@ -43,21 +43,67 @@ def view_all_book(books):
     print("\n")
 
 def view_book(books):
-    try:
-        book_id = int(input("Enter your Book Id: "))
-    except ValueError:
-        print("Invalid Book ID! Please enter numbers only")
-        logger.error("Invalid Book ID entered while searching.")
-        return
-    for book in books:
-        if book["Book_id"] == book_id:
-            print_book(book)
-            print()
-            logger.info(f"Book searched: ID={book_id}")
-            break
-    else:
-        print("Book not found")
-        logger.warning(f"Search failed. Book ID {book_id} not found.")
+    while True:
+        print("1. Search by Book ID.\n2. Search by Book Name.\n3. Search by Book Auther.\n4. Exit")
+        try:
+            choice = int(input("\nEnter your choice: "))
+        except ValueError:
+            print("Please enter a valid number.")
+            continue 
+                
+        if choice == 1:
+            try:
+                book_id = int(input("Enter your Book Id: "))
+            except ValueError:
+                print("Invalid Book ID! Please enter numbers only")
+                logger.error("Invalid Book ID entered while searching.")
+                return
+            for book in books:
+                if book["Book_id"] == book_id:
+                    print_book(book)
+                    print()
+                    logger.info(f"Book searched: ID={book_id}")
+                    break
+            else:
+                print("Book not found")
+                logger.warning(f"Search failed. Book ID {book_id} not found.")
+
+        if choice == 2:
+            try:
+                book_name = (input("Enter your Book Name: "))
+            except ValueError:
+                print("Invalid Book Name! Please enter correct value...")
+                logger.error("Invalid Book Name entered while searching.")
+                return
+            for book in books:
+                if book["Title"].lower() == book_name.lower():
+                    print_book(book)
+                    print()
+                    logger.info(f"Book searched: Name={book_name}")
+                    break
+            else:
+                print("Book not found")
+                logger.warning(f"Search failed. Book Name {book_name} not found.")
+
+        if choice == 3:
+            try:
+                book_author = (input("Enter your Book Author: "))
+            except ValueError:
+                print("Invalid Book Author! Please enter correct value...")
+                logger.error("Invalid Book Author entered while searching.")
+                return
+            for book in books:
+                if book["Author"].lower() == book_author.lower():
+                    print_book(book)
+                    print()
+                    logger.info(f"Book searched: Author={book_author}")
+                    break
+            else:
+                print("Book not found")
+                logger.warning(f"Search failed. Book Author {book_author} not found.")
+
+        if choice == 4:
+            return
 
 def del_book(books):
     found = False
