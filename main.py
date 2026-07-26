@@ -206,9 +206,12 @@ while True:
                 print("Welcome Admin")
                 admin_menu(username, role)
 
-            else:
+            elif role == "user":
                print("Welcome User")
                user_menu(username)
+
+            else:
+                print("Role not exits")
 
     elif choice == 3:
         print("Thank you for using Library Management System.")
