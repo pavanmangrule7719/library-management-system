@@ -1,9 +1,10 @@
-# 📚 Library Management System (Python)
+# 📚 Library Management System
 
-A simple Command Line Library Management System built using Python.
+A complete **Python-based Library Management System** with **Role-Based Authentication**, **Email OTP Verification**, **Book Management**, **Reservation System**, **History Tracking**, **CSV Export**, **Logging**, and **Admin Dashboard**.
 
-## ✨ Features
+This project was built to strengthen Python programming skills and demonstrate real-world software development concepts such as authentication, file handling, object-oriented programming, logging, and role-based access control.
 
+<<<<<<< HEAD
 - ➕ Add Book
 - 📖 View All Books
 - 🔍 Search Book by ID
@@ -16,101 +17,222 @@ A simple Command Line Library Management System built using Python.
 - 📊 Show Total Books
 - 💾 Store data in JSON
 - 📝 Logging using Python logging module
+=======
+---
+>>>>>>> 8a9b1dc (docs: update README with latest project features)
 
-## 🛠️ Technologies Used
+# 🚀 Features
+
+## 👤 Authentication
+
+- User Registration
+- User Login
+- SHA-256 Password Hashing
+- Email OTP Verification
+- Change Password
+- Reset Password using OTP
+- View Profile
+- Update Profile
+
+---
+
+## 📚 Book Management
+
+- Add Book
+- View All Books
+- Search Book
+- Update Book
+- Delete Book
+- Issue Book
+- Return Book
+- Available Books
+- Issued Books
+- Library Statistics
+
+---
+
+## 📖 History Management
+
+- User Book History
+- Admin View All History
+- Issue Date
+- Due Date
+- Return Date
+- Automatic Fine Calculation
+
+---
+
+## 📌 Reservation System
+
+- Reserve Book
+
+---
+
+## 👨‍💼 Admin Features
+
+- Dashboard
+- View All Users
+- Delete User
+- Change User Role
+- Export Books to CSV
+- Export History to CSV
+
+---
+
+## 🔒 Security Features
+
+- Password Hashing (SHA-256)
+- Email OTP Verification
+- Role-Based Authentication
+- Input Validation
+- Logging
+- Environment Variables (.env)
+
+---
+
+# 🛠 Technologies Used
 
 - Python 3
+- Object-Oriented Programming (OOP)
 - JSON
-- Logging Module
+- CSV
+- Logging
+- Hashlib
+- SMTP (Email)
+- Datetime
+- python-dotenv
 
-## 📂 Project Structure
+---
+
+# 📂 Project Structure
 
 ```
-Library_Management/
-│── main.py
-│── book.py
-│── operations.py
-│── logger.py
-│── book.json
-│── library.log
+Library-Management-System/
+│
+├── main.py
+├── auth.py
+├── operations.py
+├── book.py
+├── logger.py
+├── users.json
+├── book.json
+├── history.json
+├── books.csv
+├── history.csv
+├── .env
+├── .gitignore
+├── requirements.txt
 └── README.md
 ```
 
-## ▶️ How to Run
+---
 
-1. Clone the repository
+# ⚙️ Installation
+
+## Clone Repository
 
 ```bash
 git clone https://github.com/pavanmangrule7719/library-management-system.git
 ```
 
-2. Open the project folder
+## Open Project Folder
 
 ```bash
 cd library-management-system
 ```
 
-3. Run the project
+## Create Virtual Environment
+
+```bash
+python -m venv .venv
+```
+
+## Activate Virtual Environment
+
+### Windows
+
+```bash
+.venv\Scripts\activate
+```
+
+### Linux / macOS
+
+```bash
+source .venv/bin/activate
+```
+
+## Install Dependencies
+
+```bash
+pip install -r requirements.txt
+```
+
+## Run Project
 
 ```bash
 python main.py
 ```
 
-## 📋 Menu
+---
+
+# 🔐 Environment Variables
+
+Create a `.env` file.
 
 ```
-1. Add Book
-2. View All Books
-3. Search Book
-4. Delete Book
-5. Issue Book
-6. Return Book
-7. Update Book
-8. Total Books
-9. Exit
+EMAIL=your_email@gmail.com
+APP_PASSWORD=your_gmail_app_password
 ```
 
-## 📁 Data Storage
+---
 
-Book records are stored in `book.json`.
+# 📊 Project Status
 
-Example:
+✅ Completed
 
-```json
-[
-    {
-        "Book_id": 1,
-        "Title": "Python",
-        "Author": "Guido",
-        "Issued": false
-    }
-]
-```
+This project is fully functional and includes all planned features.
 
-## 📝 Logging
+It demonstrates:
 
-All important operations are stored in `library.log`.
+- Python Programming
+- Object-Oriented Programming
+- File Handling
+- Authentication System
+- Email OTP Verification
+- Logging
+- Exception Handling
+- CRUD Operations
+- Role-Based Access Control
+- CSV Export
+- Reservation System
 
-Example:
+---
 
-```
-Book Added
-Book Deleted
-Book Issued
-Book Returned
-Book Updated
-Application Closed
-```
+# 🎯 Skills Demonstrated
 
-## 🚀 Future Improvements
+- Python
+- OOP
+- JSON
+- CSV
+- File Handling
+- Authentication
+- Email Integration
+- Password Hashing
+- Logging
+- Exception Handling
+- Input Validation
+- Modular Programming
 
-- Search by Book Name
-- Search by Author
-- Login System
-- Due Date for Issued Books
-- Fine Calculation
-- Colored CLI Output
+---
 
-## 👨‍💻 Author
+# 👨‍💻 Author
 
 Pavan Mangrule
+
+GitHub: https://github.com/pavanmangrule7719
+
+---
+
+# 📄 License
+
+This project is developed for learning, portfolio, and educational purposes.
