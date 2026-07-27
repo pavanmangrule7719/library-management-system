@@ -214,14 +214,11 @@ def register():
     if not verify_otp(email, "Email Verification OTP", username):
         return
 
-    while True:
-        role = input("Enter Role (admin/user): ").strip().lower()
-
-        if role in ("admin", "user"):
-            break
-
-        print("Invalid Role.")
-        logger.warning(f"{username}: Invalid role entered.")
+    if len(users) == 0:
+        role = "admin"
+        print("First registered user becomes Admin.")
+    else:
+       role = "user"
 
     users.append({
         "Username": username,

@@ -807,4 +807,122 @@ def reserve_book(books, username):
             return
 
     print("Book not found.")
+
+def load_admin_requests():
+    try:
+        with open("admin_requests.json", "r") as file:
+            return json.load(file)
+    except (FileNotFoundError, json.JSONDecodeError):
+        return []
+
+def save_admin_requests(requests):
+    with open("admin_requests.json", "w") as file:
+        json.dump(requests, file, indent=4)
+
+def request_admin_access(username):
+    requests = load_admin_requests()
+
+    for request in requests:
+        if request["Username"] == username and request["Status"] == "Pending":
+            print("You already have a pending request.")
+            return
+
+    requests.append({
+        "Username": username,
+        "Status": "Pending"
+    })
+
+    save_admin_requests(requests)
+
+    print("Admin request sent successfully.")
+
+def review_admin_requests(current_admin, current_role):
+
+    if current_role != "admin":
+        print("Access Denied!")
+        return
+
+    requests = load_admin_requests()
+
+    pending = []
+
+    for req in requests:
+        if req["Status"] == "Pending":
+            pending.append(req)
+
+    if not pending:
+        print("\nNo Pending Requests.\n")
+        return
+
+    print("\nPending Admin Requests\n")
+
+    for i, req in enumerate(pending, start=1):
+        print(f"{i}. {req['Username']}")
+
+    try:
+        choice = int(input("\nSelect Request: "))
+
+        if choice < 1 or choice > len(pending):
+            print("Invalid Choice")
+            return
+
+    except ValueError:
+        print("Enter valid number.")
+        return
+
+    selected = pending[choice - 1]
+
+    print("\n1. Approve")
+    print("2. Reject")
+
+    action = input("\nEnter Choice: ")
+
+    if action == "1":
+        approve_admin_request(selected["Username"], current_admin)
+
+    elif action == "2":
+        reject_admin_request(selected["Username"], current_admin)
+
+    else:
+        print("Invalid Choice")
+
+def approve_admin_request(username, current_admin):
+
+    users = load_file()
+    requests = load_admin_requests()
+
+    for user in users:
+        if user["Username"] == username:
+            user["Role"] = "admin"
+            break
+
+    save_file(users)
+
+    for req in requests:
+        if req["Username"] == username and req["Status"] == "Pending":
+            req["Status"] = "Approved"
+            req["Approved_By"] = current_admin
+            break
+
+    save_admin_requests(requests)
+
+    logger.info(f"{username} promoted to admin by {current_admin}")
+
+    print("Request Approved.")
+
+def reject_admin_request(username, current_admin):
+
+    requests = load_admin_requests()
+
+    for req in requests:
+        if req["Username"] == username and req["Status"] == "Pending":
+            req["Status"] = "Rejected"
+            req["Approved_By"] = current_admin
+            break
+
+    save_admin_requests(requests)
+
+    logger.info(f"Admin request rejected for {username}")
+
+    print("Request Rejected.")
     

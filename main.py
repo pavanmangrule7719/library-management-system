@@ -27,7 +27,8 @@ def admin_menu(username, role):
 20. View All Users
 21. Change User Role
 22. Book Reservation
-23. Logout
+23. Review Admin Requests
+24. Logout
 """)
 
         try:
@@ -103,6 +104,9 @@ def admin_menu(username, role):
 
         elif choice == 22:
             reserve_book(books, username)
+
+        elif choice == 24:
+            review_admin_requests(username, role)
 
         elif choice == 23:
             logger.info(f"{username} logged out.")
@@ -185,7 +189,7 @@ def user_menu(username):
             print("Invalid choice.")
 
 while True:
-    print("1. Register\n2. Login\n3. Exit")
+    print("\n1. Register\n2. Login\n3. Exit")
 
     try:
         choice = int(input("Enter your choice(1-3): "))
