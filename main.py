@@ -131,7 +131,8 @@ def user_menu(username):
 11. Update Profile
 12. Book Reservation
 13. Library Statistics
-14. Logout
+14. Request Admin Access
+15. Logout
 """)
 
         try:
@@ -182,6 +183,9 @@ def user_menu(username):
             total_books(books)
 
         elif choice == 14:
+            request_admin_access(username)
+
+        elif choice == 15:
             logger.info(f"{username} logged out.")
             break
 
