@@ -5,6 +5,7 @@ import smtplib
 import os
 import time
 from email.message import EmailMessage
+from dotenv import load_dotenv
 from logger import logger
 
 def hash_password(password):
@@ -25,6 +26,7 @@ def generate_otp():
     return random.randint(100000, 999999)
 
 def send_otp(receiver_email, subject):
+    load_dotenv()
 
     SENDER_EMAIL = os.getenv("SENDER_EMAIL")
     APP_PASSWORD = os.getenv("APP_PASSWORD")

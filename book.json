@@ -1,1 +1,130 @@
-[]
+[
+    {
+        "Book_id": 1,
+        "Title": "Python Crash Course",
+        "Author": "Eric Matthes",
+        "Issued": false,
+        "Issue_date": "",
+        "Due_date": ""
+    },
+    {
+        "Book_id": 2,
+        "Title": "Automate the Boring Stuff with Python",
+        "Author": "Al Sweigart",
+        "Issued": false,
+        "Issue_date": "",
+        "Due_date": ""
+    },
+    {
+        "Book_id": 3,
+        "Title": "Fluent Python",
+        "Author": "Luciano Ramalho",
+        "Issued": false,
+        "Issue_date": "",
+        "Due_date": ""
+    },
+    {
+        "Book_id": 4,
+        "Title": "Clean Code",
+        "Author": "Robert C. Martin",
+        "Issued": false,
+        "Issue_date": "",
+        "Due_date": ""
+    },
+    {
+        "Book_id": 5,
+        "Title": "The Pragmatic Programmer",
+        "Author": "Andrew Hunt",
+        "Issued": false,
+        "Issue_date": "",
+        "Due_date": ""
+    },
+    {
+        "Book_id": 6,
+        "Title": "Introduction to Algorithms",
+        "Author": "Thomas H. Cormen",
+        "Issued": false,
+        "Issue_date": "",
+        "Due_date": ""
+    },
+    {
+        "Book_id": 7,
+        "Title": "Hands-On Machine Learning",
+        "Author": "Aurélien Géron",
+        "Issued": false,
+        "Issue_date": "",
+        "Due_date": ""
+    },
+    {
+        "Book_id": 8,
+        "Title": "Deep Learning",
+        "Author": "Ian Goodfellow",
+        "Issued": false,
+        "Issue_date": "",
+        "Due_date": ""
+    },
+    {
+        "Book_id": 9,
+        "Title": "Pattern Recognition and Machine Learning",
+        "Author": "Christopher Bishop",
+        "Issued": false,
+        "Issue_date": "",
+        "Due_date": ""
+    },
+    {
+        "Book_id": 10,
+        "Title": "Artificial Intelligence: A Modern Approach",
+        "Author": "Stuart Russell",
+        "Issued": false,
+        "Issue_date": "",
+        "Due_date": ""
+    },
+    {
+        "Book_id": 11,
+        "Title": "Data Science from Scratch",
+        "Author": "Joel Grus",
+        "Issued": false,
+        "Issue_date": "",
+        "Due_date": ""
+    },
+    {
+        "Book_id": 12,
+        "Title": "Designing Data-Intensive Applications",
+        "Author": "Martin Kleppmann",
+        "Issued": false,
+        "Issue_date": "",
+        "Due_date": ""
+    },
+    {
+        "Book_id": 13,
+        "Title": "Computer Networks",
+        "Author": "Andrew S. Tanenbaum",
+        "Issued": false,
+        "Issue_date": "",
+        "Due_date": ""
+    },
+    {
+        "Book_id": 14,
+        "Title": "Operating System Concepts",
+        "Author": "Abraham Silberschatz",
+        "Issued": false,
+        "Issue_date": "",
+        "Due_date": ""
+    },
+    {
+        "Book_id": 15,
+        "Title": "Database System Concepts",
+        "Author": "Abraham Silberschatz",
+        "Issued": false,
+        "Issue_date": "",
+        "Due_date": ""
+    },
+    {
+        "Book_id": 16,
+        "Title": "Computer Organization and Design",
+        "Author": "David A. Patterson",
+        "Issued": false,
+        "Issue_date": "",
+        "Due_date": ""
+    }
+]
